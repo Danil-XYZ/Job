@@ -42,7 +42,6 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             }
         }
 
-
         welcomeEditText.addTextChangedListener {
             if (welcomeEditText.text.toString() != "") {
                 continueButton.isEnabled = true
