@@ -42,10 +42,6 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             }
         }
 
-        lookingForButton.setOnClickListener {
-            findNavController().navigate(R.id.searchFragment)
-        }
-
         welcomeEditText.addTextChangedListener {
             if (welcomeEditText.text.toString() != "") {
                 continueButton.isEnabled = true
