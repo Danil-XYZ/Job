@@ -30,4 +30,5 @@
     <string name="confirm">Подтвердить</string>
     <string name="position_keywords">Должность, ключевые слова</string>
     <string name="email_or_phone">Электронная почта или телефон</string>
+    <string name="by_compliance">По соответствию</string>
 </resources>

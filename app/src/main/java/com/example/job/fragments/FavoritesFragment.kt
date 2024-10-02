@@ -52,7 +52,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites), JobsAdapter.OnJ
                 val tempList = data.vacancies.filter { it.isFavorite }
                 jobsAdapter.updateData(tempList)
 
-                val vacanciesCount = data.vacancies.size
+                val vacanciesCount = tempList.size
                 jobsNumber.setText(
                     when {
                         vacanciesCount % 10 == 1 && vacanciesCount % 100 != 11 -> "$vacanciesCount вакансия"
