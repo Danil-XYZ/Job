@@ -1,0 +1,21 @@
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Состояние нажатия -->
+<item android:state_pressed="true">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Цвет фона -->
+        <solid android:color="@color/dark_green" />
+        <corners android:radius="100dp" />
+    </shape>
+</item>
+
+<!-- Состояние по умолчанию -->
+<item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Цвет фона -->
+        <solid android:color="@color/gray1" />
+        <corners android:radius="100dp" />
+    </shape>
+</item>
+</selector>

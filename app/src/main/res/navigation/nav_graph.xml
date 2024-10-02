@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.job.fragments.WelcomeFragment">
+        <action
+            android:id="@+id/action_welcome_to_password"
+            app:destination="@id/passwordFragment">
+            <argument
+                android:name="email"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.example.job.fragments.PasswordFragment">
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_password_to_search"
+            app:destination="@+id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.example.job.fragments.JobFragment">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="fragment"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.job.fragments.SearchFragment"
+        android:label="Поиск">
+        <action
+            android:id="@+id/action_search_to_job"
+            app:destination="@+id/jobFragment">
+            <argument
+                android:name="id"
+                app:argType="string" />
+            <argument
+                android:name="fragment"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.job.fragments.FavoritesFragment"
+        android:label="Избранное">
+        <action
+            android:id="@+id/action_favorites_to_job"
+            app:destination="@+id/jobFragment">
+            <argument
+                android:name="id"
+                app:argType="string" />
+            <argument
+                android:name="fragment"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/responsesFragment"
+        android:name="com.example.job.fragments.ResponsesFragment"
+        android:label="Отклики" />
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.job.fragments.MessagesFragment"
+        android:label="Сообщения" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.job.fragments.ProfileFragment"
+        android:label="Профиль" />
+</navigation>

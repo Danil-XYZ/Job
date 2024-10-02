@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/jobsCard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:elevation="0dp"
+    app:cardBackgroundColor="@color/gray1"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/heartButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:src="@drawable/ic_unfilled_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lookingNumber"
+            style="@style/GreenText"
+            android:layout_width="0dp"
+            android:text="lookingNumber"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Text16"
+            android:text="title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lookingNumber" />
+
+        <TextView
+            android:id="@+id/salary"
+            style="@style/Text22"
+            android:text="salary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/Text14"
+            android:text="address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+        <TextView
+            android:id="@+id/company"
+            style="@style/Text14"
+            android:text="company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_briefcase"
+            app:layout_constraintBottom_toBottomOf="@+id/experience"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/company"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/experience"
+            style="@style/Text14"
+            android:text="experience"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/company" />
+
+        <TextView
+            android:id="@+id/publishedDate"
+            style="@style/Text14_grey"
+            android:text="publishedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experience" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Text14"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/green_rounded_button_background"
+            android:text="@string/reply"
+            android:textAllCaps="false"
+            android:textColor="@color/button_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/publishedDate"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

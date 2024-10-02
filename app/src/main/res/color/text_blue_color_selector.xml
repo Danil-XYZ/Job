@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Цвет текста при нажатии -->
+    <item android:color="@color/dark_blue" android:state_pressed="true"/>
+    <!-- Обычный цвет текста -->
+    <item android:color="@color/blue"/>
+</selector>

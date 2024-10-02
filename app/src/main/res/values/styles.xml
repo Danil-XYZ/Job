@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="IconText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/nav_item_color</item>
+    </style>
+
+    <style name="GreenText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="ButtonText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/button_text_color</item>
+    </style>
+
+    <style name="Text24" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text22" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text20" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text16" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text14" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text14_grey" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/gray3</item>
+    </style>
+
+    <style name="Text13_red" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textStyle"></item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+</resources>

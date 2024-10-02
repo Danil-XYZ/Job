@@ -1,0 +1,25 @@
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние деактивировано -->
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/dark_blue" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- Состояние нажато -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/dark_blue" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- Состояние не нажато (по умолчанию) -->
+    <item>
+        <shape>
+            <solid android:color="@color/blue" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>

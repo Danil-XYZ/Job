@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Job</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="response">Response</string>
+    <string name="message">Message</string>
+    <string name="profile">Profile</string>
+    <string name="enter_button">Enter</string>
+    <string name="login_to_your_personal_account">Login to your personal account</string>
+    <string name="continue_link">Continue</string>
+    <string name="log_in_with_password">Log in with password</string>
+    <string name="job_searching">Job searching</string>
+    <string name="search_for_employees">Employees searching</string>
+    <string name="posting">Posting vacancies and access to the resume database</string>
+    <string name="looking_for_employees">I am looking for employees</string>
+    <string name="jobs_for_you">Jobs for you</string>
+    <string name="add_cover_letter">Add cover letter</string>
+    <string name="your_cover_letter">Your cover letter</string>
+    <string name="reply">Reply</string>
+    <string name="ui_ux_designer">UI/UX Designer</string>
+    <string name="resume_for_application">Resume for application</string>
+    <string name="is_the_vacancy_open">Is the vacancy open?</string>
+    <string name="what_is_the_salary">What is the salary?</string>
+    <string name="what_is_the_work_schedule">What is the work schedule?</string>
+    <string name="where_is_the_workplace_located">Where is the workplace located?</string>
+    <string name="he_will_receive_it">He will receive it with the application for the vacancy</string>
+    <string name="ask_a_question_to_the_employer">Ask a question to the employer</string>
+    <string name="your_tasks">Your tasks</string>
+    <string name="write_it_to_confirm">Write it to confirm that it is you and not someone else entering the personal account</string>
+    <string name="confirm">Confirm</string>
+    <string name="position_keywords">Position, keywords</string>
+    <string name="email_or_phone">Email or phone</string>
+</resources>

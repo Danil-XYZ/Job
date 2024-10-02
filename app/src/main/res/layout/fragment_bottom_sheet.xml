@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/black">
+
+
+    <View
+        android:id="@+id/drag_handle"
+        android:layout_width="38dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/drag_handle_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/Text14_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/resume_for_application"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        style="@style/Text16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/ui_ux_designer"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="117dp"
+        android:background="@color/gray2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addCoverLetter"
+        style="@style/Text16"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00FFFFFF"
+        android:text="@string/add_cover_letter"
+        android:textColor="@color/text_green_color_selector"
+        app:layout_constraintBottom_toTopOf="@+id/replyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textAllCaps="false" />
+
+    <EditText
+        android:id="@+id/coverLetter"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        style="@style/Text14"
+        android:visibility="gone"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="12dp"
+        android:hint="@string/your_cover_letter"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:maxLines="5"
+        android:background="@null"
+        android:textColorHint="@color/gray3"
+        app:layout_constraintBottom_toTopOf="@+id/replyButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/replyButton"
+        style="@style/ButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/green_button_background"
+        android:text="@string/reply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_marginBaseline="0dp"
+        app:textAllCaps="false" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

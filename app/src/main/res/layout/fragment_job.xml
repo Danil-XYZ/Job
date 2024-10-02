@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:background="@null"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_share"
+            app:layout_constraintEnd_toStartOf="@+id/heartButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_eye"
+            app:layout_constraintEnd_toStartOf="@+id/shareButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/heartButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_unfilled_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Text22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="68dp"
+            android:text="Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/salary"
+            style="@style/Text14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Salary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/experience"
+            style="@style/Text14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Experience"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+        <TextView
+            android:id="@+id/schedules"
+            style="@style/Text14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Schedules"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experience" />
+
+        <LinearLayout
+            android:id="@+id/watchingLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schedules">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_green"
+                android:elevation="0dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/appliedNumber"
+                    style="@style/Text14"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:text="147 человек уже откликнулись" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_green_profile" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_green"
+                android:elevation="0dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/lookingNumber"
+                    style="@style/Text14"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:text="2 человека сейчас смотрят" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_green_eye" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mapCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/gray1"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/watchingLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/company"
+                        style="@style/Text16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/ic_check_mark" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <com.yandex.mapkit.mapview.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/Text16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Address" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/Text14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="description"
+            app:layout_constraintTop_toBottomOf="@+id/mapCard" />
+
+        <TextView
+            android:id="@+id/yourTasks"
+            style="@style/Text20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/your_tasks"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <TextView
+            android:id="@+id/responsibilities"
+            style="@style/Text14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="responsibilities"
+            app:layout_constraintTop_toBottomOf="@+id/yourTasks" />
+
+        <TextView
+            android:id="@+id/askYourQuestion"
+            style="@style/Text14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/ask_a_question_to_the_employer"
+            app:layout_constraintTop_toBottomOf="@+id/responsibilities" />
+
+        <TextView
+            android:id="@+id/heWillGetIt"
+            style="@style/Text14_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/he_will_receive_it"
+            app:layout_constraintTop_toBottomOf="@+id/askYourQuestion" />
+
+        <LinearLayout
+            android:id="@+id/questionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/heWillGetIt">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question1"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:background="@drawable/grey_rounded_button_background"
+                android:paddingHorizontal="8dp"
+                android:text="@string/where_is_the_workplace_located"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question2"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/grey_rounded_button_background"
+                android:paddingHorizontal="8dp"
+                android:text="@string/what_is_the_work_schedule"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question3"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/grey_rounded_button_background"
+                android:paddingHorizontal="8dp"
+                android:text="@string/is_the_vacancy_open"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question4"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/grey_rounded_button_background"
+                android:paddingHorizontal="8dp"
+                android:text="@string/what_is_the_salary"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/replyButton"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/green_button_background"
+            android:text="@string/reply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionLayout"
+            app:layout_marginBaseline="0dp"
+            app:textAllCaps="false" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

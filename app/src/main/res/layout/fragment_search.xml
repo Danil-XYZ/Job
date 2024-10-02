@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/searchNestedScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="8dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="@string/position_keywords"
+            style="@style/Text16"
+            android:textColorHint="@color/gray3"
+            android:background="@drawable/rounded_edittext"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="120dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            android:layout_marginTop="16dp" />
+
+
+        <LinearLayout
+            android:id="@+id/jobsLinearLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/recommendations">
+
+            <TextView
+                android:id="@+id/jobsNumber"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="145 вакансий"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:background="#00FFFFFF"
+                android:text="@string/log_in_with_password"
+                android:textColor="@color/text_blue_color_selector"
+                app:textAllCaps="false" />
+
+            <ImageView
+                android:id="@+id/loginIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_vectores"
+                android:layout_gravity="bottom" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/jobsLinearLayout" />
+
+        <TextView
+            android:id="@+id/jobsForYou"
+            style="@style/Text20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/jobs_for_you"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/jobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/jobsForYou" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/moreJobsButton"
+            style="@style/Text16"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/blue_button_background"
+            android:text="Ещё 143 вакансии"
+            android:textAllCaps="false"
+            android:textColor="@color/button_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/jobs"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

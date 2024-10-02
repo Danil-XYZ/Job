@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/Text20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/login_to_your_personal_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/gray1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="24dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/job_searching"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/welcomeEditText"
+                style="@style/Text16"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawableLeft="@drawable/ic_responses"
+                android:drawablePadding="8dp"
+                android:hint="@string/email_or_phone"
+                android:paddingHorizontal="8dp"
+                android:textColorHint="@color/gray3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/mistake"
+                android:visibility="gone"
+                style="@style/Text13_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Вы ввели неверный e-mail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeEditText" />
+
+
+            <ImageButton
+                android:id="@+id/crossButton"
+                android:visibility="gone"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_cross"
+                app:layout_constraintBottom_toBottomOf="@+id/welcomeEditText"
+                app:layout_constraintEnd_toEndOf="@+id/welcomeEditText"
+                app:layout_constraintTop_toTopOf="@+id/welcomeEditText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/continueButton"
+                style="@style/ButtonText"
+                android:layout_width="167dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/blue_button_background"
+                android:enabled="false"
+                android:text="@string/continue_link"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mistake"
+                app:layout_marginBaseline="0dp"
+                app:layout_wrapBehaviorInParent="horizontal_only"
+                app:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:textAllCaps="false"
+                android:text="@string/log_in_with_password"
+                android:textColor="@color/text_blue_color_selector"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/continueButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/continueButton"
+                app:layout_constraintTop_toTopOf="@+id/continueButton" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/gray1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="24dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_for_employees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/posting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/lookingForButton"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:layout_editor_absoluteX="16dp"
+                android:text="@string/looking_for_employees"
+                android:textAllCaps="false"
+                style="@style/ButtonText"
+                android:background="@drawable/green_rounded_button_background"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
