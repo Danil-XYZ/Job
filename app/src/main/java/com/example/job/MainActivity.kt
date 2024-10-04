@@ -2,6 +2,7 @@ package com.example.job
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.forEach
 import androidx.lifecycle.ViewModelProvider
@@ -28,6 +29,17 @@ class MainActivity : AppCompatActivity() {
     fun init() = with(binding) {
         viewModel = ViewModelProvider(this@MainActivity).get(SharedViewModel::class.java)
         viewModel.fetchDataFromServer()
+
+        viewModel.data.observe(this@MainActivity) {
+            val favoritesCount = it!!.vacancies.filter { it.isFavorite == true }.size
+            if (favoritesCount == 0) {
+                newFavoriteJobs.visibility = View.GONE
+            }
+            else {
+                newFavoriteJobs.visibility = View.VISIBLE
+                newFavoriteJobs.text = favoritesCount.toString()
+            }
+        }
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.navHostFragment) as NavHostFragment

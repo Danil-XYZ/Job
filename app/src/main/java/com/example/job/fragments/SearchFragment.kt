@@ -129,7 +129,8 @@ class SearchFragment : Fragment(R.layout.fragment_search), JobsAdapter.OnJobClic
     override fun onHeartClick(itemId: String) {
         val data = viewModel.data.value
         data?.let {data->
-            data.vacancies.find { it.id == itemId }!!.isFavorite = data.vacancies.find { it.id == itemId }!!.isFavorite.not()
+            val flag = data.vacancies.find { it.id == itemId }!!.isFavorite.not()
+            data.vacancies.find { it.id == itemId }!!.isFavorite = flag
             viewModel.updateData(data)
         }
     }

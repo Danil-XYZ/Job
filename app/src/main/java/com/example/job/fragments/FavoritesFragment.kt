@@ -43,7 +43,6 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites), JobsAdapter.OnJ
         viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         favoriteViewModel = ViewModelProvider(requireActivity()).get(FavoriteViewModel::class.java)
 
-
         val savedPosition = favoriteViewModel.getScrollPosition()
         favoritesNestedScrollView.scrollTo(0, savedPosition)
 
@@ -87,7 +86,8 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites), JobsAdapter.OnJ
     override fun onHeartClick(itemId: String) {
         val data = viewModel.data.value
         data?.let {data->
-            data.vacancies.find { it.id == itemId }!!.isFavorite = data.vacancies.find { it.id == itemId }!!.isFavorite.not()
+            val flag = data.vacancies.find { it.id == itemId }!!.isFavorite.not()
+            data.vacancies.find { it.id == itemId }!!.isFavorite = flag
             viewModel.updateData(data)
         }
     }

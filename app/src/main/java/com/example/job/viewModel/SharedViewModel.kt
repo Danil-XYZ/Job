@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 class SharedViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: Repository
     private val responseDataDao: ResponseDataDao
+
     val data: LiveData<ResponseData?>
 
     init {
